@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Receipt Generator</title>
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <!-- SIMPLE DESIGN -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            color: #4a2633;
+        }
+
+        header {
+            background-color: #f4a6c1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: rgb(255, 240, 240);
+            margin: 5px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            background-color: white;
+            color: #a9436a;
+            text-decoration: none;
+            padding: 8px 12px;
+            margin: 4px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #ffe0ea;
+        }
+
+        .container {
+            background-color: white;
+            width: 500px;
+            max-width: 85%;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h2,
+        h3 {
+            color: #a64067;
+        }
+
+        input[type="button"] {
+            background-color: #e889aa;
+            color: white;
+            border: none;
+            padding: 9px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #d66f94;
+        }
+
+        #result {
+            background-color: #ffe0ea;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #f4a6c1;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Alfa-Cafe</h1>
+
+        <nav>
+            <a href="index.html">Receipt Generator</a>
+            <a href="sku.html">SKU Generator</a>
+        </nav>
+    </header>
+
+
+    <!-- RECEIPT -->
+    <div class="container">
+
+        <h2>Receipt Generator</h2>
+
+        <h3>Drinks</h3>
+
+        <input type="checkbox" id="Menu1" value="150">
+        <label for="Menu1">Iced Choco - ₱150</label><br>
+
+        <input type="checkbox" id="Menu2" value="200">
+        <label for="Menu2">Strawberry Latte - ₱200</label><br>
+
+
+        <h3>Food</h3>
+
+        <input type="checkbox" id="Menu3" value="250">
+        <label for="Menu3">Strawberry Cake - ₱250</label><br>
+
+        <input type="checkbox" id="Menu4" value="70">
+        <label for="Menu4">Chocolate Chip Cookie - ₱70</label><br><br>
+
+
+        <input type="button" py-click="create_order" value="Create Receipt">
+
+
+        <div id="result">
+            <strong>Receipt:</strong>
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Alfa-Cafe | ICT 10 Project</p>
+    </footer>
+
+
+    <!-- RECEIPT PYTHON -->
+    <script type="py" src="receipt.py"></script>
+
+</body>
+
+</html>

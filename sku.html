@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SKU Generator</title>
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <!-- SIMPLE DESIGN -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            color: #4a2633;
+        }
+
+        header {
+            background-color: #f4a6c1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: white;
+            margin: 5px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            background-color: white;
+            color: #a64067;
+            text-decoration: none;
+            padding: 8px 12px;
+            margin: 4px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #ffe0ea;
+        }
+
+        .container {
+            background-color: white;
+            width: 500px;
+            max-width: 85%;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h2,
+        h3 {
+            color: #a64067;
+        }
+
+        select,
+        input[type="number"] {
+            padding: 7px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #e889aa;
+            color: white;
+            border: none;
+            padding: 9px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #d66f94;
+        }
+
+        #output {
+            background-color: #ffe0ea;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #f4a6c1;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Alfa-Cafe</h1>
+
+        <nav>
+            <a href="index.html">Receipt Generator</a>
+            <a href="sku.html">SKU Generator</a>
+        </nav>
+    </header>
+
+
+    <!-- SKU GENERATOR -->
+    <div class="container">
+
+        <h2>SKU Generator</h2>
+
+        <p>Enter the product information below.</p>
+
+
+        <h3>Product Category</h3>
+
+        <select id="categories">
+
+            <option value="DR">Drink</option>
+            <option value="FD">Food</option>
+
+        </select>
+
+
+        <h3>Product Name</h3>
+
+        <select id="product">
+
+            <option value="Iced Choco">Iced Choco</option>
+            <option value="Strawberry Latte">Strawberry Latte</option>
+            <option value="Strawberry Cake">Strawberry Cake</option>
+            <option value="Chocolate Chip Cookie">Chocolate Chip Cookie</option>
+
+        </select>
+
+
+        <h3>Stock Quantity</h3>
+
+        <input type="number" id="qty" min="1">
+
+
+        <br><br>
+
+
+        <button py-click="create_SKU">
+            Generate SKU
+        </button>
+
+
+        <div id="output">
+            SKU:
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Alfa-Cafe | ICT 10 Project</p>
+    </footer>
+
+
+    <!-- SKU PYTHON -->
+    <script type="py" src="sku.py"></script>
+
+</body>
+
+</html>
